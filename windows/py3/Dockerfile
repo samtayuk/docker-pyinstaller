@@ -48,7 +48,7 @@ RUN set -x \
     && rm -rf /tmp/.wine-*
 
 # install pyinstaller
-RUN /usr/bin/pip install pyinstaller==$PYINSTALLER_VERSION
+RUN /usr/bin/pip install pyinstaller==$PYINSTALLER_VERSION cx_Freeze
 
 # put the src folder inside wine
 RUN mkdir /src/ && ln -s /src /wine/drive_c/src
